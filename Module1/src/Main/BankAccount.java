@@ -31,7 +31,7 @@ public class BankAccount {
 			System.out.println("Insufficient funds.");
 			System.out.println();
 		} else {
-			System.out.println("Withdrawal amout must be greater than zero.");
+			System.out.println("Withdrawal amount must be greater than zero.");
 			System.out.println();
 		}
 	}

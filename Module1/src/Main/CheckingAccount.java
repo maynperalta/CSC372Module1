@@ -10,7 +10,7 @@ public class CheckingAccount extends BankAccount {
 // checking account withdrawal (different from generic bank account withdrawal)	
 	public void processWithdrawal (double amount) {
 		if (amount <= 0) {
-			System.out.println("Withdrawal amout must be greater than zero.");
+			System.out.println("Withdrawal amount must be greater than zero.");
 			System.out.println();
 			return;
 		}
