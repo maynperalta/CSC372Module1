@@ -19,10 +19,10 @@ public class BankAccount {
 			System.out.println("Amount of deposit cannot be negative.");
 		}
 	}
-	public void withdrawal(double value) {
-		if (value > 0 && balance >= value) {
-			balance -= value;
-		} else if (value > balance) {
+	public void withdrawal(double amount) {
+		if (amount > 0 && balance >= amount) {
+			balance -= amount;
+		} else if (amount > balance) {
 			System.out.println("Insufficient funds.");
 		} else {
 			System.out.println("Amount of withdrawal cannot be negative.");
