@@ -4,7 +4,7 @@ public class BankAccount {
 	private String firstName;
 	private String lastName;
 	private int accountID;
-	private double balance;
+	protected double balance;
 	
 	public BankAccount() {
 		this.firstName = "";
@@ -15,6 +15,7 @@ public class BankAccount {
 	public void deposit(double value) {
 		if(value > 0) {
 			balance += value;
+			System.out.printf("Deposit successful. New balance: $%.2f%n", balance);
 		} else {
 			System.out.println("Amount of deposit cannot be negative.");
 		}
