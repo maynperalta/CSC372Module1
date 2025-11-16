@@ -6,29 +6,31 @@ public class BankAccount {
 	private int accountID;
 	protected double balance;
 	
+// constructor to initialize bank account balance to zero.	
 	public BankAccount() {
-		this.firstName = "";
-		this.lastName = "";
-		this.accountID = 0;
 		this.balance = 0.0;
 	}
-	public void deposit(double value) {
-		if(value > 0) {
-			balance += value;
+// deposit method	
+	public void deposit(double amount) {
+		if(amount > 0) {
+			balance += amount;
 			System.out.printf("Deposit successful. New balance: $%.2f%n", balance);
 		} else {
-			System.out.println("Amount of deposit cannot be negative.");
+			System.out.println("Deposit amount must be greater than zero.");
 		}
 	}
+// withdrawal method
 	public void withdrawal(double amount) {
 		if (amount > 0 && balance >= amount) {
 			balance -= amount;
+			System.out.printf("Withdrawal successful. New balance: $%.2f%n", balance);
 		} else if (amount > balance) {
 			System.out.println("Insufficient funds.");
 		} else {
-			System.out.println("Amount of withdrawal cannot be negative.");
+			System.out.println("Withdrawal amout must be greater than zero.");
 		}
 	}
+// setter and getter methods	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -47,9 +49,11 @@ public class BankAccount {
 	public int getAccountID() {
 		return accountID; 
 	}
+// getter method for balance	
 	public double getBalance() {
 		return balance; 
 	}
+// method to display account information	
 	public void accountSummary() {
 		System.out.println("Account Details:");
 		System.out.println("Account ID: " + accountID);		
