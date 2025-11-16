@@ -15,8 +15,10 @@ public class BankAccount {
 		if(amount > 0) {
 			balance += amount;
 			System.out.printf("Deposit successful. New balance: $%.2f%n", balance);
+			System.out.println();
 		} else {
 			System.out.println("Deposit amount must be greater than zero.");
+			System.out.println();
 		}
 	}
 // withdrawal method
@@ -24,10 +26,13 @@ public class BankAccount {
 		if (amount > 0 && balance >= amount) {
 			balance -= amount;
 			System.out.printf("Withdrawal successful. New balance: $%.2f%n", balance);
+			System.out.println();
 		} else if (amount > balance) {
 			System.out.println("Insufficient funds.");
+			System.out.println();
 		} else {
 			System.out.println("Withdrawal amout must be greater than zero.");
+			System.out.println();
 		}
 	}
 // setter and getter methods	

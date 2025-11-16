@@ -11,20 +11,24 @@ public class CheckingAccount extends BankAccount {
 	public void processWithdrawal (double amount) {
 		if (amount <= 0) {
 			System.out.println("Withdrawal amout must be greater than zero.");
+			System.out.println();
 			return;
 		}
 // if checking account withdrawal request greater than balance. add overdraft fee.		
 		if (amount > balance) {
 			balance -= (amount + 30);
 			System.out.printf("Account overdrawn. $30 fee charged. Balance: $%.2f%n", balance);
+			System.out.println();
 		} else {
 			balance -= amount;
 			System.out.printf("Withdrawal successful. Balance: $%.2f%n", balance);
+			System.out.println();
 		}
 	}
 // displays attributes from superclass method and adds interest rate	
 	public void displayAccount() {
 		accountSummary();
 		System.out.printf("Interest rate: %.2f%%%n", interestRate);
+		System.out.println();
 	}
 }
