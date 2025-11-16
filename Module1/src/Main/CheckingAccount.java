@@ -8,7 +8,7 @@ public class CheckingAccount extends BankAccount {
 		this.interestRate = rate;
 	}
 	
-	public void accountWithdrawal (double amount) {
+	public void processWithdrawal (double amount) {
 		if (amount <= 0) {
 			System.out.println("Amount of withdrawal cannot be negative.");
 			return;
